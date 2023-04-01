@@ -1,0 +1,60 @@
+@charset "UTF-08";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100vh;
+    width: 100vw;
+    background-color: #3B542F;
+}
+
+main {
+    position: relative;
+    height: 100vh;
+    background-color: #3B542F;
+}
+
+.menu {
+    border: 2px solid white;
+    margin-top: 5px;
+    height: 150px;
+
+}
+
+.fundo {
+    position: relative;
+    top: 50px;
+    height: 300px;
+    border: 2px solid white;
+    background-image: url(../imagens/fundo\ \(3\).png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: contain;
+
+}
+
+header {
+    height: 90px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    align-items: center;
+}
+
+.icone {
+    width: 200px;
+}
+
+.escola {
+    width: 300px;
+}
+
+.logo {
+    width: 250px;
+}
+
