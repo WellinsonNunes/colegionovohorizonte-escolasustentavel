@@ -1,48 +1,40 @@
 @charset "UTF-08";
+@import url('https://fonts.googleapis.com/css2? family= Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300 & display=swap');
 
 * {
     margin: 0px;
     padding: 0px;
+    font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+}
+
+:root {
+    --color1:#5B8235;
+    --color2:#3a5321;
+    --color3:black;
+    --color4:white;
+
 }
 
 html, body {
     height: 100vh;
     width: 100vw;
-    background-color: #3B542F;
+    background-color: white;
+    padding: 0 1rem;
 }
 
-main {
-    position: relative;
-    height: 100vh;
-    background-color: #3B542F;
-}
 
-.menu {
-    border: 2px solid white;
-    margin-top: 5px;
-    height: 150px;
 
-}
-
-.fundo {
-    position: relative;
-    top: 50px;
-    height: 300px;
-    border: 2px solid white;
-    background-image: url(../imagens/fundo\ \(3\).png);
-    background-repeat: no-repeat;
-    background-position: bottom center;
-    background-size: contain;
-
-}
 
 header {
     height: 90px;
+    border-color: var(--color3);
+    border-style: solid;
+    border-width: 0px 1px 1px 1px;
     background-color: white;
     display: flex;
     justify-content: space-between;
-    padding: 10px 15px;
+    padding: 20px;
     align-items: center;
 }
 
@@ -56,5 +48,16 @@ header {
 
 .logo {
     width: 250px;
+}
+
+section.principal {
+    padding-right: 0px;
+    padding-bottom: 150px;
+}
+
+section.principal img {
+    display: block;
+    margin: 20px 0 0 auto;
+    max-width: 100%;
 }
 
