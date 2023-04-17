@@ -3,8 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
@@ -20,18 +20,11 @@
 
 }
 
-html, body {
-    height: 100vh;
-    width: 100vw;
-    background-color: white;
-    
-}
-
-
 
 
 header {
     height: 90px;
+    width: 100%;
     border-color: var(--color3);
     border-style: solid;
     border-width: 0px 1px 1px 1px;
@@ -56,29 +49,78 @@ header {
 
 main {
     background-color:#83b452;
-    display: grid;
+    display: flex;
+    min-width: 100vw;
+    flex-direction: column;
 }
 
 section.principal {
-    padding-right: 0px;
-    padding-bottom: 150px;
-    height: 400px;
+
+    padding: 10px;
     display: grid;
-    grid-template-columns: 40% 50%;
+    gap: 40px;
+    width: 100vw;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "item1 item1 item2"
+        "item3 item4 item5"
+        "item6 item6 item6"
+        
+        ;
+    
 }
 
-div.texto1 {
-    position: relative;
-    top: 50px;
+
+
+
+
+
+.item1 {
+    grid-area: item1;
+    padding: 10px;
     line-height: 1.5em;
-    
-    
 }
 
-div.texto1 h1 {
+
+
+.item1 h1 {
     font-family:var(--font1);
     font-size: 1.7em;
     padding: 30px;
+}
+
+
+.item2 {
+    grid-area: item2;
+   
+}
+
+.item3 {
+    grid-area: item3;
+   
+    
+}
+
+.item4 {
+    grid-area: item4;
+}
+
+.item5 {
+    grid-area: item5;
+    
+}
+
+.item6 {
+    grid-area: item6;
+    text-align: center;
+    
+}
+
+
+
+div.texto2 {
+    padding: 10px;
+    line-height: 1.5em;
 }
 
 div.button {
@@ -95,36 +137,25 @@ div.button a {
     text-decoration: none;
 }
 
-section.projetos {
-    text-align: center;
-    height: 470px;
-}
 
-div.cards {
-    display: grid;
-    grid-template-columns: 30% 30% 30%;
-    gap: 2rem;
-    padding: 10px;
-    margin: auto;
-}
-
-article {
+#card {
     border: 1px solid black;
     border-radius: 5px;
     background-color: #5B8235;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.466);
     display: grid;
     grid-template-columns: 40% 60%;
+    text-align: center;
 }
 
-article h2 {
+#card h2 {
     padding: 5px;
     font-size: 1.2em;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.397);
     
 }
 
-article p {
+#card p {
     padding: 5px;
     margin-top: 7px;
 }
@@ -159,22 +190,11 @@ img.redesociais {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.37);
 }
 
-section.rodape {
-    padding: 10px;
-    background-color: rgb(209, 206, 206);
-    display: grid;
-    grid-template-columns: 50% 50%;
-}
 
-div.endereco {
-    line-height: 0.6em;
-    margin-top: 10px;
-    text-align: right;
-}
 
 footer {
     
-    background-color: rgb(150, 148, 148);
+    background-color: rgb(201, 199, 199);
     text-align: center;
     padding: 30px;
 }
@@ -189,3 +209,26 @@ footer a {
     text-decoration: none;
 }
 
+
+@media (max-width: 958px) {
+    section.principal {
+        grid-template-areas:
+        "item1 item1 item1"
+        "item2 item2 item2"
+        "item3 item3 item3"
+        "item4 item4 item4"
+        "item5 item5 item5"
+        "item6 item6 item6"
+         ;
+    }
+
+        header {
+            height: 270px;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            justify-content: center;
+            
+
+}
+}
