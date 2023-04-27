@@ -50,88 +50,13 @@ main {
     height: 70vh;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.514);
-    overflow:hidden ;
-   
-    
+    display: grid;
 
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "foto1 foto2 foto3"
+        "foto4 foto5 foto6"
+        
+        ;
 }
-
-.slides {
-    width: 400px;
-    height: 400px;
-    display: flex;
-}
-
-.slides input {
-    display:none;
-}
-
-
-
-.manual-navigation {
-    position: absolute;
-    width: 100vw;
-    margin-top: -40px;
-    display: flex;
-    justify-content: center;
-}
-
-.manual-btn {
-    border: 2px solid white;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
-}
-
-.manual-btn:not(:last-child) {
-    margin-right: 40px;
-}
-
-.manual-btn:hover{
-    background-color: wheat;
-}
-
-#radio1:checked ~ .first{
-    margin-left: 0;
-}
-
-#radio2:checked ~ .first{
-    margin-left: -800px;
-}
-
-#radio3:checked ~ .first{
-    margin-left: -100%;
-}
-
-.navigation-auto div{
-    border: 2px solid blue;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
-}
-
-.navigation-auto{
-    position: absolute;
-    width: 100%;
-    margin-top: 360px;
-    justify-content: center;
-}
-
-.navigation-auto div:not(:last-child){
-    margin-right: 40px;
-}
-
-#radio1:checked ~ .navigation-auto .autobtn1{
-background-color: white;
-}
-
-#radio2:checked ~ .navigation-auto .autobtn2{
-    background-color: white;
-    }
-
-#radio3:checked ~ .navigation-auto .autobtn3{
-    background-color: white;
-        }
 
