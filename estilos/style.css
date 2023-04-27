@@ -17,10 +17,11 @@
     --font1: 'Secular One', sans-serif;
     --font2: 'Bebas Neue', sans-serif;
 
-
 }
 
-
+body {
+    overflow: hidden;
+}
 
 header {
     height: 90px;
@@ -62,18 +63,13 @@ section.principal {
     width: 100vw;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
-        "item2 item1 item1"
+        "item1 item1 item2"
         "item3 item4 item5"
         "item6 item6 item6"
         
         ;
     
 }
-
-
-
-
-
 
 .item1 {
     grid-area: item1;
@@ -82,26 +78,20 @@ section.principal {
 }
 
 
-
 .item1 h1 {
     font-family:var(--font1);
     font-size: 1.7em;
     padding: 30px;
 }
 
-
-
-
 .item2 {
     grid-area: item2;
-    
-   
+       
 }
 
 .item3 {
     grid-area: item3;
    
-    
 }
 
 .item4 {
@@ -118,8 +108,6 @@ section.principal {
     text-align: center;
     
 }
-
-
 
 div.texto2 {
     padding: 10px;
